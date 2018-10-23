@@ -63,25 +63,47 @@
                 category 6 
             </div>
         </div>
-        <div class="content">Content
-            <div class="product-view">
-                product 1 view
-            </div>
-            <div class="product-view">
-                product 2 view
-            </div>
-            <div class="product-view">
-                product3
-            </div>
-            <div class="product-view">
-                product 4 view 
-            </div>
-            <div class="product-view">
-                product 5 view
-            </div>
+        <div class="content">
+            <div class="wrow">
+                <div class="col-1">
+                    
+                </div>
+                <div class="col-2">
+                    <div class="register-form">
+                        <span id="log-in" class="switch-forms">login</span>
+                        <h1>Sign up here</h1>
+                        <form class="form register" action="includes/register.php" method="POST">
+                            <input class="signup_up" type="text" name="email" placeholder="example@example.com" >
+                            <input class="signup_middel" type="text" name="username" placeholder="Username" >
+                            <input class="signup_down" type="password" name="pwd" placeholder="Password" >
+                            <button class="searchBtn" type="submit" name="submit">signup</button>
+                        </form>
+                    </div>
+                    
+                    <div class="login-form">
+                        <span id="sign-up" class="switch-forms">sign up</span> 
+                        <h1>Login here</h1>
+                        <form class="form-login" action="includes/login.php" method="POST">
+                            <input class="login_up" type="text"  name="username" placeholder="Username/email"/>
+                            <input class="login_down" type="password"  name="pwd" placeholder="password"/>
+                            <button class="searchBtn" type="submit" name="submit">login</button>
+                        </form>
+                        <a href="forgot_password.php"> forgot your password?</a></br>
+                    </div>
+                </div>
+                <div class="col-3">
+
+                </div>
+            
         </div>
         <div class="footer">Footer
         </div>        
     </div>
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+  </script>
+  <script src="js/login.js"></script>
 </body>
 </html>
