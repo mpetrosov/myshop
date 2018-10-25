@@ -93,7 +93,6 @@ date_default_timezone_set('Europe/Amsterdam');
                         }
                     }
 
-
                 if (empty($_GET['code'])){
                    
                     echo "

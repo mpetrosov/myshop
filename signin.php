@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,10 +60,6 @@
             </div>
         </div>
         <div class="content">
-            <div class="wrow">
-                <div class="col-1">
-                    
-                </div>
                 <div class="col-2">
                     <div class="register-form">
                         <span id="log-in" class="switch-forms">login</span>
@@ -91,11 +83,7 @@
                         <a href="forgot_password.php"> forgot your password?</a></br>
                     </div>
                 </div>
-                <div class="col-3">
-
-                </div>
-            
-        </div>
+            </div>
         <div class="footer">Footer
         </div>        
     </div>
