@@ -30,14 +30,18 @@
                         $_SESSION['id'] = $row['id'];
                         $_SESSION['u_email'] = $row['u_email'];
                         $_SESSION['u_name'] = $row['u_name'];
-                        // $_SESSION['is_admin'] = $row['is_admin'];
+                        // $_SESSION['is_admin'] = $row['is_admin']; 
+                        include('header1.php');
                         header("Location: ../userpage.php?login=success");
+                       
                         exit();
                     }
                 }
             }
         }
     } else {
+        // include('header.php');
         header("Location: ../signin.php?login=error");
+        
         exit();
     }

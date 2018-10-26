@@ -1,13 +1,12 @@
 .container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 450px);
-    /* grid-template-rows: repeat(3, 200px); */
+    grid-template-columns: repeat(auto-fill, 1fr);
     grid-gap: 10px;
 }
 
-.nav{
+.logo{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 390px);
+    grid-template-columns: repeat(auto-fill, 350px);
     grid-gap: 5px; 
     grid-column-start: 1;
     grid-column-end: 5; /* if you write insteed 5 -1 it should be also correct */ 
@@ -15,21 +14,44 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 30vh; 
+    /* height: 30vh;  */
     color: black;
-    /* text-align: center; */
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: left; */
     position: sticky;
     top: 0;
 }
 
-.searchBox{
+/* .navbar{
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-column-start: 3;
-    grid-column-end: 7;
+    grid-column-end: 5; 
+} */
+
+.help{
+    grid-column-start: 1;
+    grid-column-end: 2; 
+}
+.message{
+    grid-column-start: 2;
+    grid-column-end: 3; 
+}
+
+.login{
+    grid-column-start: 3;
+    grid-column-end: 4; 
+}
+
+.shopcar{
+    grid-column-start: 4;
+    grid-column-end: 5; 
+}
+
+.searchBox{
+    grid-column-start: 1;
+    grid-column-end: 5;
     padding-right: 10px;
-    text-align: right;
+    text-align: left;
 }
 
 #searchBar{
@@ -69,14 +91,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-decoration: none;
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
     font-family: 'Acme', sans-serif;
 }
 
 .button-help {
-    margin-top: 180px;
-    font-weight: 700;
+    /* margin-top: 180px;*/
+    font-weight: 700; 
     text-decoration: none;
     color: #0F4167;
     text-transform: uppercase;
