@@ -7,7 +7,7 @@
     if(!isAuthenticated()){
         include('includes/header.php');
         include('includes/sidebar.php');
-    die(header('Location: '.BASE_URL. "signin.php?failed"));
+    die(header('Location: '.BASE_URL."signin.php?failed"));
     }else{
         include('includes/header1.php'); 
         include('includes/sidebar.php');

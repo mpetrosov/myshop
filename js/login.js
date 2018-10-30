@@ -9,3 +9,12 @@ $(function(){
         $('.register-form').show('hidden');
     });
 });
+
+$(document).ready(function() {
+    var basePath = 'http://localhost/myshop/';
+    $('#category-selector').on('change', function(event) {
+        event.preventDefault();
+        var select = $(this);
+        window.location.href = basePath + select.val();
+    });
+});

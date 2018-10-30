@@ -13,7 +13,7 @@
 ?>
  
 
-        <div class="content">Content
+        <div class="content">TV`s
             <div class="product-view">
                 product 1 view
             </div>

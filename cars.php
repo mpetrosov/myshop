@@ -11,24 +11,19 @@
         include('includes/sidebar.php');
     }
 ?>
- 
 
-        <div class="content">Content
+        <div class="content">CARS
+            <?php
+            $category = isset($_GET['category']) ? $_GET['category'] : '';
+            $products = getProductCars($category);
+
+            foreach($products as $car){?>
             <div class="product-view">
-                product 1 view
+                <h3><?php echo $car['name']; ?></h3>
+                <p><?php echo $car['id']; ?>
             </div>
-            <div class="product-view">
-                product 2 view
-            </div>
-            <div class="product-view">
-                product3
-            </div>
-            <div class="product-view">
-                product 4 view 
-            </div>
-            <div class="product-view">
-                product 5 view
-            </div>
+            <?php } ?>
+            
         </div>
 <?php
     include('includes/footer.php');
