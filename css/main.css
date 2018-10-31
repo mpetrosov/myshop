@@ -1,12 +1,15 @@
+*{
+    text-decoration: none;
+}
 .container{
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, 1fr); */
     grid-gap: 10px;
+    border-radius: 5px;
 }
 
 .logo{
     display: grid;
-    grid-template-columns: repeat(auto-fill, 350px);
+    grid-template-columns: repeat(auto-fill, 450px);
     grid-gap: 5px; 
     grid-column-start: 1;
     grid-column-end: 5; /* if you write insteed 5 -1 it should be also correct */ 
@@ -90,18 +93,23 @@
 }
 
 .name{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3; 
+    border-radius: 5px;
+    /* background: radial-gradient(ellipse at center, #adbf41 20%,#328a26 80%);
+	height: 100%; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     text-decoration: none;
-    font-size: 80px;
-    text-align: center;
-    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    /* text-align: center; */
 }
 
 .button-help {
     /* margin-top: 180px;*/
-    font-weight: 700; 
+    font-weight: 500; 
     text-decoration: none;
     color: #0F4167;
     text-transform: uppercase;
@@ -123,6 +131,28 @@
     background-color: #0F4167;
 }
 
+h2{
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #2c2c2c;
+    background-color: transparent;
+    letter-spacing: 0.05em;
+    text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2{
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #2c2c2c;
+    background-color:transparent;
+    letter-spacing: 0.05em;
+    text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
 .right{
     border: 2px solid #A8CCD1;
     font-size: 16px;
@@ -137,22 +167,126 @@
     padding-left: 10px;
     grid-column-start: 1;
     grid-column-end: 2;
+    border-radius: 8px;
     border: 1px solid bcornflowerbluelack;
     background-color: cornflowerblue;
+    font-size: 26px;    
+    font-family: 'Handlee', cursive;
 }
 
-/* .category{
-
-} */
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}    .select select {
+        font-family: 'Arial';
+        display: inline-block;
+        width: 60%;
+        cursor: pointer;
+        padding: 9px 11px;
+        outline: 0;
+        border: 2px hidden #000000;
+        border-radius: 13px;
+        background: #e7e7f2;
+        color: #2d0c0c;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+        .select select::-ms-expand {
+            display: none;
+        }
+        .select select:hover,
+        .select select:focus {
+            color: #3a2d2d;
+            background: #e3e6f0;
+        }
+        .select select:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+.select_arrow {
+    position: absolute;
+    top: 16px;
+    right: 22px;
+    width: 0px;
+    height: 0px;
+    border: solid #7b7b7b;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow {
+    border-color: #000000;
+}
+.select select:disabled ~ .select_arrow {
+    border-top-color: #cccccc;
+}
 
 .content{
-    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 380px);
+    grid-gap: 5px; 
+    grid-column-start: 1;
     grid-column-end: 5;
     border: 1px solid gainsboro;
     background-color: gainsboro;
+    border-radius: 8px;
 }
 
-span{
+.sub-content{
+    border-radius: 8px;
+}
+
+.sub-category{
+    color: whitesmoke;
+    font-weight: 500; 
+    /* border: 2px solid #D1EAEF;
+    border-radius: 3px; */
+}
+
+.sub-category:hover{
+    color: #fff;
+    background-color: rgb(56, 125, 179);
+}
+
+.product-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 380px);
+    grid-gap: 5px; 
+    grid-column-start: 2;
+    grid-column-end: 5;
+    border-radius: 8px;
+    border: 1px solid gainsboro;
+    background-color: gainsboro;
+
+}
+
+.product-view{
+    border-radius: 8px;
+    border: 1px solid #74B5CB;
+    background-color: gainsboro;
+}
+
+.sub-header{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    font-weight: 600;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #6495ED;
+    background-color: #DCDCDC;
+    letter-spacing: 0.05em;
+    text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+.span{
     font-size: 30px;
 }
 
@@ -205,9 +339,9 @@ span{
     color: #124A6E;
     width: 360px;
 }
-.col-2 h1{
+/* .col-2 h1{
     text-align: center;
-}
+} */
 
 .footer{
     grid-column-start: 1;
@@ -217,3 +351,78 @@ span{
 }
 
 
+/* Chrome only people! */
+
+@font-face {
+	font-family:'Decovar Regular24'; 
+	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Decovar-VF.ttf');
+}
+
+h1 {
+	margin: 0;
+	font-size: 5vw;
+	position: relative;
+
+	/* Variable font */
+	font-family: "Decovar Regular24"; 
+	font-variation-settings: 'INLN' 1000, 'SWRM' 1000;
+
+	
+	/* Background clip to image */
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;	
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/209708058_b5a5fb07a6_o.jpg);
+	background-size: 30%;
+	background-repeat: repeat;
+	
+	text-shadow: 2px 2px 5px rgba(#2a4308, 0.4);
+	animation: grow 4s linear infinite;
+}	
+	h1 ::before {	
+		text-shadow: 
+			1px 1px 2px rgba(#2a4308, 0.5),
+			-1px 1px 2px rgba(#2a4308, 0.5),
+			-1px -1px 2px rgba(#2a4308, 0.5),
+			1px -1px 2px rgba(#2a4308, 0.5),
+			3px 3px 20px rgba(#000, 0.5);
+	}
+	
+	::after {
+		color: #421F00;
+		font-variation-settings: 'INLN' 0;
+	}
+
+
+@keyframes grow {
+	0% {
+		font-variation-settings: 'INLN' 1000, 'SWRM' 1000;
+	}
+	
+	50% {
+		font-variation-settings: 'INLN' 1000, 'SWRM' 0;
+	}
+}
+
+
+/* Positioning */
+/* h1 {
+    font-family:'Decovar Regular24'; 
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	letter-spacing: 0.6rem;
+	
+	&:after, &:before {
+		content: attr(data-text);
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+} */

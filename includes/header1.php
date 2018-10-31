@@ -16,7 +16,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="logo"><a href="main.php" class="name"> My Litle Shop.com </a><div class="help">
+        <div class="logo">
+            <div class="name">
+                <a href="main.php"> <h1 class="grass">My Litle Shop.com</h1></a>
+            </div>
+            <div class="help">
                 <a href="help.php" class="button-help">  help <i class="fas fa-info-circle"></i></a>
             </div>
             <div class="message">
@@ -29,9 +33,9 @@
                 <a href="#" class="button-help">car<i class="fas fa-shopping-cart"></i></a>
             </div>
             <div class="searchBox">
-                <form action="search.php" method="POST">
-                    <input type="text" id="searchBar" placeholder="" value="Search ..." maxlength="25" autocomplete="off">
-                    <input class="searchBtn" type="submit" value="GO!">
+                <form action="./search.php" method="POST">
+                    <input type="text" id="searchBar" name="search" placeholder="Search ..." maxlength="25" autocomplete="off">
+                    <input class="searchBtn" type="submit" value="GO!" name="searchBtn">
                 </form>
             </div>            
         </div>

@@ -8,34 +8,31 @@ include_once('functions.php');
 $arrGroups = ['cars'=>'cars.php', 'bikes'=>'bikes.php','laptops'=>'laptops.php','tvs'=>'tvs.php'];
    
 ?>
-<div class="sidebar">Groups 
-<select id="category-selector">
-<?php
+<div class="sidebar"><h2>Groups</h2> 
+    <div class="select">
+        <select id="category-selector">
+        <?php
+        $currentController = $_SERVER['SCRIPT_NAME'];
+        if (endsWith($currentController, 'main.php')) {
+            ?>
+            <option>All</option>
+            <?php
+        }
 
 
+        foreach($arrGroups as $key=>$value){?>
 
-$currentController = $_SERVER['SCRIPT_NAME'];
+            
+                <option value="<?php echo $value;?>" 
+                    <?php if (endsWith($currentController, $value)) { echo 'selected="selected"'; } ?>>
+                    <?php echo $key;?>
+                </option>
 
-if (endsWith($currentController, 'main.php')) {
-    ?>
-    <option>All</option>
+        <?php }?>
+        </select>
+    </div>
+
     <?php
-}
-
-
-foreach($arrGroups as $key=>$value){?>
-
-     
-        <option 
-            value="<?php echo $value; ?>" 
-            <?php if (endsWith($currentController, $value)) { echo 'selected="selected"'; } ?>>
-                <?php echo $key;?>
-            </option>
-
-<?php }?>
-</select>
-
-<?php
 
     // echo $currentController;
 

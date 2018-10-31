@@ -12,7 +12,8 @@
     }
 ?>
 
-        <div class="content">CARS
+        <div class="product-content">
+            <div class="sub-header">CARS</div>
             <?php
             $category = isset($_GET['category']) ? $_GET['category'] : '';
             $products = getProductCars($category);

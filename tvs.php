@@ -13,22 +13,19 @@
 ?>
  
 
-        <div class="content">TV`s
-            <div class="product-view">
-                product 1 view
-            </div>
-            <div class="product-view">
-                product 2 view
-            </div>
-            <div class="product-view">
-                product3
-            </div>
-            <div class="product-view">
-                product 4 view 
-            </div>
-            <div class="product-view">
-                product 5 view
-            </div>
+        <div class="product-content">
+            <div class="sub-header">TV`s</div>
+                <?php
+                $category = isset($_GET['category']) ? $_GET['category'] : '';
+                $products = getProductBikes($category);
+
+                foreach($products as $bike){?>
+                <div class="product-view">
+                    <h3><?php echo $bike['name']; ?></h3>
+                    <p><?php echo $bike['id']; ?>
+                </div>
+                <?php } ?>
+           
         </div>
 <?php
     include('includes/footer.php');

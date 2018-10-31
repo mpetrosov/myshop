@@ -12,18 +12,19 @@
     }
 ?>
 
-        <div class="content">CARS
-            <?php
-            $category = isset($_GET['category']) ? $_GET['category'] : '';
-            $products = getProductBikes($category);
+        <div class="product-content">
+            <div class="sub-header">BIKES</div>
+                <?php
+                $category = isset($_GET['category']) ? $_GET['category'] : '';
+                $products = getProductBikes($category);
 
-            foreach($products as $bike){?>
-            <div class="product-view">
-                <h3><?php echo $bike['name']; ?></h3>
-                <p><?php echo $bike['id']; ?>
-            </div>
-            <?php } ?>
-            
+                foreach($products as $bike){?>
+                <div class="product-view">
+                    <h3><?php echo $bike['name']; ?></h3>
+                    <p><?php echo $bike['id']; ?>
+                </div>
+                <?php } ?>
+           
         </div>
 <?php
     include('includes/footer.php');

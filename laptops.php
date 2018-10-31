@@ -12,7 +12,8 @@
     }
 ?>
 
-        <div class="content">Laptops
+        <div class="product-content">
+            <div class="sub-header">LAPTOPS</div>
             <?php
             $category = isset($_GET['category']) ? $_GET['category'] : '';
             $products = getProductLaptops($category);
@@ -23,7 +24,6 @@
                 <p><?php echo $laptop['id']; ?>
             </div>
             <?php } ?>
-            
         </div>
 <?php
     include('includes/footer.php');

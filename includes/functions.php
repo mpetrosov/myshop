@@ -5,7 +5,7 @@
     function getCars(){
             global $conn;
 
-            $sql = "SELECT id, name FROM `car_brand`";
+            $sql = "SELECT `id`, `name` FROM `car_brand`";
 
             $result = mysqli_query($conn, $sql);
 
@@ -36,7 +36,7 @@
     
         function getBikes(){
             global $conn;
-            $sql = "SELECT id, name FROM `bike_brand`";
+            $sql = "SELECT `id`, `name` FROM `bike_brand`";
             $result = mysqli_query($conn, $sql); ;
             $bikes = [];
             while ($row = mysqli_fetch_assoc($result)) {
@@ -62,7 +62,7 @@
 
         function getLaptops(){
             global $conn;
-            $sql = "SELECT id, name FROM `laptop_brand`";
+            $sql = "SELECT `id`, `name` FROM `laptop_brand`";
             $result = mysqli_query($conn, $sql); ;
             $laptops = [];
             while ($row = mysqli_fetch_assoc($result)) {
@@ -88,7 +88,7 @@
 
         function getTVs(){
             global $conn;
-            $sql = "SELECT id, name FROM `tv_brand`";
+            $sql = "SELECT `id`, `name` FROM `tv_brand`";
             $result = mysqli_query($conn, $sql); ;
             $tvs = [];
             while ($row = mysqli_fetch_assoc($result)) {
